@@ -1,0 +1,81 @@
+
+inventario = {}
+
+#menu principal
+
+while True:
+    print ("\n-----MENÚ PRINCIPAL-----")
+    print ("1. ver inventario ")
+    print ("2. añadir producto ")
+    print ("3. actualizar stock ")
+    print ("4. eliminar producto ")
+    print ("5. buscar producto ")
+    print ("6. salir ")
+
+    opcion = int(input("eliga una opcion: "))
+
+    if opcion == 1:
+        print ()
+
+    elif opcion == 2:
+        print ()
+
+    elif opcion == 3:
+        print ()
+    
+    elif opcion == 4:
+        print ()
+    
+    elif opcion == 5:
+        print ()
+
+    elif opcion == 6:
+        print ("saliendo del sistema, Hasta pronto!......")
+        break
+
+    else:
+        print("error! opcion no valida...")
+
+
+#validacion de precio
+
+while True:
+    try:
+        precio = float(input("ingrese el precio correspondiente: "))
+        
+        if precio < 0:
+            print("el precio no pude ser negativo.")
+
+        else:
+            break
+    
+    except ValueError:
+        print("error! debe ingresar un numero.")
+
+
+#validacion de stock
+
+while True:
+    try:
+        stock = int(input("ingrese el stock: "))
+
+        if stock < 0:
+            print("el stock debe ser un numero positivo.")
+        
+        else:
+            break
+    
+    except ValueError:
+        print("error! debes ingresar un numero valido.")
+
+
+#validacion de existencia de producto
+
+nombre = input("ingrese el nombre del producto: ")
+
+if nombre in inventario:
+    print("producto encontrado")
+
+else:
+    print("producto no existe")
+
